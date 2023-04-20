@@ -1,20 +1,29 @@
 {
   "inbounds": [
     {
-      "type": "shadowtls",
-      "listen_port": 443,
-      "handshake": {
-        "server": "www.bing.com",
-        "server_port": 443 
-      },
-      "detour": "shadowsocks-in"
-    },
+  "type": "shadowtls",
+  "tag": "st-in",
+  "version": 3,
+  "password": "fuck me till the daylight",
+  "users": [
     {
-      "type": "shadowsocks",
-      "tag": "shadowsocks-in",
-      "listen": "127.0.0.1",
-      "method": "2022-blake3-aes-128-gcm",
+      "name": "sekai",
       "password": "填写自定义密码"
+    }
+  ],
+  "handshake": {
+    "server": "cloud.tencent.com",
+    "server_port": 443,
+  },
+  "handshake_for_server_name": {
+    "example.com": {
+      "server": "example.com",
+      "server_port": 443,
+    }
+  },
+  "strict_mode": false
+}
     }
   ]
 }
+ 
